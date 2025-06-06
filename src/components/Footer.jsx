@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Footer() {
   return (
-    <footer>Footer</footer>
-  )
+    <footer aria-label="Site Footer">
+      <p>2023 © Spots</p>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

@@ -1,9 +1,11 @@
-import React from 'react'
-
-function Header() {
+const Header = () => {
   return (
-    <header>Header</header>
-  )
-}
+    <header className="">
+      <a href="/" aria-label="Go to homepage">
+        <img src="/assets/insta-spots-logo.svg" alt="insta spots logo" />
+      </a>
+    </header>
+  );
+};
 
-export default Header
+export default Header;

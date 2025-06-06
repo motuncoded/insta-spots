@@ -1,0 +1,237 @@
+header {
+  background-color: var(--header-bcg-clr);
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Profile section */
+.hero__profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: calc(1280px - 2rem);
+  margin: 2rem auto 0rem auto;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #21212166;
+}
+
+/* Profile section */
+.hero__content {
+  display: flex;
+  gap: 1rem;
+}
+
+.profile__img {
+  max-width: 100%;
+  width: 190px;
+  height: 190px;
+  border-radius: 8px;
+}
+
+.profile__name {
+  color: #212121;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-top: -0.5rem;
+}
+
+.profile__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-betwween;
+}
+
+.profile__bio {
+  color: #212121b2;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.profile__edit {
+  border: none;
+  background-color: transparent;
+  color: #212121b2;
+  display: flex;
+  margin-top: auto;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.profile__edit:hover {
+  color: #212121;
+}
+
+.new_post {
+  display: flex;
+  align-self: flex-end;
+  margin-bottom: 0.5rem;
+}
+.new_post > button {
+  display: flex;
+  background-color: #212121;
+  border: none;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.new_post > button span,
+.profile__edit > span {
+  padding-left: 0.5rem;
+  font-size: 1rem;
+}
+.new_post > button:hover {
+  background-color: #212121cc;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: calc(1280px - 2rem);
+  padding: 1rem 0;
+  margin: 0rem auto;
+  border-bottom: 1px solid #21212166;
+}
+.card > img {
+  width: 100%;
+  height: 313px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.card__content > h3 {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+.card__content {
+  display: flex;
+  justify-content: space-between;
+}
+.like-button:hover {
+  background-color: #212121;
+}
+footer {
+  text-align: center;
+  color: #212121b2;
+  padding: 2rem;
+}
+/* Edit Profile Modal  */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--background-color);
+}
+
+.image-preview-container {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.image-preview {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 50%;
+  display: none;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border: 2px solid gold;
+}
+
+.btn-secondary {
+  background-color: #f0f0f0;
+  color: #333;
+  margin-right: 1rem;
+}
+
+.btn-secondary:hover {
+  background-color: #e0e0e0;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
