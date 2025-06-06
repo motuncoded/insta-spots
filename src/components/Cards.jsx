@@ -1,18 +1,15 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import LikeIconDefault from "/assets/like-icon-default.svg";
 import LikeIconActive from "/assets/like-icon-active.svg";
 import LikeIconHover from "/assets/like-icon-hover.svg"; // Add a hover state icon
 
 import posts from "../json/posts.json";
 
-
-
-
 const Cards = () => {
   const newPost = posts.map((post) => ({
     ...post,
     liked: false,
-    hovered: false
+    hovered: false,
   }));
 
   const [cards, setCards] = useState(newPost);
@@ -47,7 +44,6 @@ const Cards = () => {
                 onMouseEnter={() => handleHover(card.name, true)}
                 onMouseLeave={() => handleHover(card.name, false)}
                 onClick={() => updateLikeStatus(card.name)}
-                onhover
                 aria-label={card.liked ? "Unlike this post" : "Like this post"}
               >
                 <img

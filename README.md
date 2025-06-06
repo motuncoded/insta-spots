@@ -42,12 +42,14 @@ This is the code interface for the **Insta-spots** design, created as a frontend
 ### Installation
 
 1. **Clone the repository:**
+
    ```sh
    git clone https://github.com/motuncoded/insta-spots.git
    cd insta-spots
    ```
 
 2. **Install dependencies:**
+
    ```sh
    npm install
    # or
@@ -55,6 +57,7 @@ This is the code interface for the **Insta-spots** design, created as a frontend
    ```
 
 3. **Run the development server:**
+
    ```sh
    npm run dev
    # or
