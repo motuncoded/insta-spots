@@ -13,6 +13,8 @@ const Cards = () => {
   }));
 
   const [cards, setCards] = useState(newPost);
+  const [selectedImage, setSelectedImage] = useState(null);
+
   // Update like status
   const updateLikeStatus = (name) => {
     setCards((prevCards) =>
@@ -30,12 +32,27 @@ const Cards = () => {
       ),
     );
   };
+
+  // Open modal with selected image
+  const openModal = (card) => {
+    setSelectedImage(card);
+  };
+
+  // Close modal
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
   return (
     <section className="cards" aria-label="Cards Section">
       {cards.map((card, index) => {
         return (
           <div key={index} className="card">
-            <img src={card.imgSrc} alt={card.name} />
+            <img
+              src={card.imgSrc}
+              alt={card.name}
+              onClick={() => openModal(card)}
+              style={{ cursor: "pointer" }}
+            />
             <div className="card__content">
               <h3>{card.name}</h3>
               <button
@@ -62,6 +79,19 @@ const Cards = () => {
           </div>
         );
       })}
+      {selectedImage && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-card-content" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={selectedImage.imgSrc}
+              alt={selectedImage.name}
+              className="modal-image"
+            />
+            <h3 className="modal-title">{selectedImage.name}</h3>
+          
+          </div>
+        </div>
+      )}
     </section>
   );
 };

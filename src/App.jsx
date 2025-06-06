@@ -11,7 +11,6 @@ function App() {
       <main aria-label="hero section">
         <Profile />
         <Cards />
-
         <Footer />
       </main>
     </>

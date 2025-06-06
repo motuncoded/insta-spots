@@ -116,7 +116,24 @@ header {
   background-color: transparent;
   cursor: pointer;
 }
-
+.modal-image{
+    border-radius:8px;
+}
+.modal-card-content{
+    background-color: var(--white-clr);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+}
+.modal-card-content >h3{
+    margin-top:1rem;
+    text-align: center;
+    font-weight: 500;
+}
 /* footer */
 footer {
   text-align: center;
@@ -221,6 +238,8 @@ footer {
   color: #212121;
   border: none;
 }
+
+
 @media screen and (max-width: 900px) {
   main {
     margin: 1rem;
