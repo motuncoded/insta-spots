@@ -1,32 +1,27 @@
 [
   {
     "name": "Val Thorens",
-    "imgSrc": "./assets/val-thorens.svg",
-    "liked": false
+    "imgSrc": "./assets/val-thorens.svg"
   },
   {
     "name": "Restaurant terrace",
-    "imgSrc": "./assets/restaurant-terrace.svg",
-    "liked": false
+    "imgSrc": "./assets/restaurant-terrace.svg"
   },
   {
     "name": "An outdoor cafe",
-    "imgSrc": "./assets/an-outdoor-cafe.svg",
-    "liked": false
+    "imgSrc": "./assets/an-outdoor-cafe.svg"
   },
   {
     "name": "A very long bridge, over the forest...",
-    "imgSrc": "./assets/long-bridge.svg",
-    "liked": false
+    "imgSrc": "./assets/long-bridge.svg"
   },
   {
     "name": "Tunnel with morning light",
-    "imgSrc": "./assets/tunnel-morning.svg",
-    "liked": false
+    "imgSrc": "./assets/tunnel-morning.svg"
   },
   {
     "name": "Mountain house",
-    "imgSrc": "./assets/mountain-house.svg",
-    "liked": false
+    "imgSrc": "./assets/mountain-house.svg"
+ 
   }
 ]

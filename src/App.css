@@ -109,9 +109,13 @@ header {
   display: flex;
   justify-content: space-between;
 }
-.like-button:hover {
-  background-color: #212121;
+.like-button{
+    border:none;
+    outline:none;
+    background-color: transparent;
+    cursor:pointer;
 }
+
 /* footer */
 footer {
   text-align: center;
