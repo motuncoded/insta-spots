@@ -10,7 +10,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: calc(1280px - 2rem);
+  width: calc(1280px - 2rem);
+  max-width: 100%;
   margin: 2rem auto 0rem auto;
   padding: 0.5rem 0;
   border-bottom: 1px solid #21212166;
@@ -32,14 +33,14 @@ header {
 .profile__name {
   color: #212121;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: clamp(1.25rem, 2rem, 4vw);
   margin-top: -0.5rem;
 }
 
 .profile__content {
   display: flex;
   flex-direction: column;
-  justify-content: space-betwween;
+  justify-content: space-between;
 }
 
 .profile__bio {
@@ -85,9 +86,10 @@ header {
   background-color: #212121cc;
 }
 
+/* Post cards */
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
   max-width: calc(1280px - 2rem);
   padding: 1rem 0;
@@ -111,6 +113,7 @@ header {
 .like-button:hover {
   background-color: #212121;
 }
+/* footer */
 footer {
   text-align: center;
   color: #212121b2;
@@ -234,4 +237,62 @@ footer {
   display: flex;
   justify-content: flex-end;
   margin-top: 2rem;
+}
+@media screen and (max-width: 900px) {
+  main {
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    margin: 1rem;
+  }
+  .hero__profile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile__img {
+    width: 80px;
+    height: 80px;
+  }
+  .profile__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile__name {
+    margin: -0.5rem 0;
+  }
+  .new_post {
+    display: flex;
+    align-self: center;
+    margin-bottom: 0.5rem;
+  }
+  .profile__edit {
+    margin: 1.5rem 0 1rem 0;
+  }
+
+  .new_post > button {
+    width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 320px) {
+  .new_post > button {
+    width: 288px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
