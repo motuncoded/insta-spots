@@ -145,7 +145,7 @@ const ProfileCard = () => {
         <button
           type="button"
           aria-label="New Post Button"
-          onClick={handlePostSave}
+          onClick={handleNewPostClick}
         >
           <img src="./assets/plus-icon.svg" alt="New Post Icon" />
           <span>New Post</span>
@@ -210,7 +210,7 @@ const ProfileCard = () => {
           </div>
         </div>
       )}
-
+      
       {/* New Post Modal */}
       {isPostModalOpen && (
         <div className="modal-overlay" aria-modal="true">
